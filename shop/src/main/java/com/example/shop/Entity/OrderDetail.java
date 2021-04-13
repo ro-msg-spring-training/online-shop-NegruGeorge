@@ -21,14 +21,14 @@ public class OrderDetail  {
     @ManyToOne
     @MapsId("idOrderr")
     @JoinColumn(name="IdOrderr")
-    Orderr orderr;
+    private Orderr orderr;
 
     @ManyToOne
     @MapsId("idProduct")
     @JoinColumn(name="IdProduct")
-    Product product;
+    private Product product;
 
-    Integer Quantity;
+    private Integer Quantity;
 
     public OrderDetail(Orderr orderr, Product product) {
         this.orderr = orderr;
