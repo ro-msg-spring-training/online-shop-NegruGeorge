@@ -35,6 +35,7 @@ public class Orderr extends EntittyId {
     {
         this.ShippedFrom =l;
         this.customer = c;
+
         this.address = a;
     }
 

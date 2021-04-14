@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
@@ -14,17 +15,17 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper = true)
 public class Product extends EntittyId {
 
-    String Namee;
-    String Description;
-    Double Price;
-    Double Weight;
+    private String Namee;
+    private String Description;
+    private  BigDecimal Price;
+    private Double Weight;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="IdCategory")
-    ProductCategory productCategory;
+    private ProductCategory productCategory;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="IdSupplier")
-    Supplier supplier;
+   private  Supplier supplier;
     public Product(ProductCategory prod,Supplier sup)
     {
         this.productCategory = prod;

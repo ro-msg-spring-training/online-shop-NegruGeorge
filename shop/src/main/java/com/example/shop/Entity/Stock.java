@@ -20,14 +20,14 @@ public class Stock{
     @ManyToOne
     @MapsId("idProduct")
     @JoinColumn(name="IdProduct")
-    Product product;
+    private Product product;
 
     @ManyToOne
     @MapsId("idLocation")
     @JoinColumn(name="IdLocation")
-    Location location;
+    private Location location;
 
-    Integer quantity;
+   private Integer quantity;
 
     public Stock(Product p, Location l)
     {
