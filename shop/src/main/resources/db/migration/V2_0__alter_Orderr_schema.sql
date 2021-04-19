@@ -1,0 +1,1 @@
+alter table orderr rename column streetadress to streetaddress;

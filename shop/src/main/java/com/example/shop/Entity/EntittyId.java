@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -15,7 +13,8 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class EntittyId {
     @Id
-    private Integer Id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Integer Id;
 
 
 

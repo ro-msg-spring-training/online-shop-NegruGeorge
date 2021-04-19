@@ -1,5 +1,6 @@
 package com.example.shop.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,11 +12,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductCategoryDTO implements Serializable {
-    private Integer id;
-    private String name;
-    private String description;
-
-
+public class OrderDetailDTO implements Serializable {
+    private Integer idProduct;
+    private Integer quantity;
 
 }
