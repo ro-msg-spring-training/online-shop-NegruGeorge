@@ -8,6 +8,7 @@ import com.example.shop.dto.OrderDTO;
 import com.example.shop.dto.OrderDetailDTO;
 import com.example.shop.dto.OrderrObjDTO;
 import com.example.shop.service.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,7 @@ public class OrderController {
     private final OrderServiceImpl srv;
     private final InProductRepo productRepo;
 
+    @Autowired
     public OrderController(OrderServiceImpl srv, InProductRepo productRepo) {
         this.srv = srv;
         this.productRepo = productRepo;

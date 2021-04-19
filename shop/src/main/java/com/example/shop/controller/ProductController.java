@@ -17,12 +17,12 @@ import java.util.Optional;
 
 @RestController
 public class ProductController {
-    private ProductServiceImpl srv;
-    private InProductRepo repoProduct;
-    private InProductCategoryRepo repoCategory;
-    private InSupplierRepo repoSupplier;
-    private InStockRepo stockRepo;
-    private InLocationRepo locationRepo;
+    private final ProductServiceImpl srv;
+    private final InProductRepo repoProduct;
+    private final InProductCategoryRepo repoCategory;
+    private final InSupplierRepo repoSupplier;
+    private final InStockRepo stockRepo;
+    private final InLocationRepo locationRepo;
 
     @Autowired
     public ProductController(ProductServiceImpl serv,InProductRepo repo,InProductCategoryRepo repoCategory, InSupplierRepo supplierRepo,InStockRepo stockRepo,InLocationRepo locationRepo)
@@ -41,6 +41,8 @@ public class ProductController {
 
         return srv.getALL();
     }
+
+
 
     @GetMapping("/products/{id}")
     public ProductDTO getProduct(@PathVariable Integer id)

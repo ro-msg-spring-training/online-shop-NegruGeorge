@@ -8,6 +8,7 @@ import com.example.shop.dto.OrderDTO;
 import com.example.shop.dto.OrderrObjDTO;
 import com.example.shop.dto.StockDTO;
 import com.example.shop.strategy.InStrategy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class OrderServiceImpl implements InService<OrderDTO, Orderr> {
     private final InProductRepo productRepo;
     private final OrderrConverter orderrConverter;
 
+    @Autowired
     public OrderServiceImpl(InOrderrRepo orderrRepo, InOrderDetailsRepo orderDetailsRepo, InStockRepo stockRepo, InStrategy strategy, AddressConverter addressConverter, InLocationRepo locationRepo, InProductRepo productRepo, OrderrConverter orderrConverter) {
         this.orderrRepo = orderrRepo;
         this.orderDetailsRepo = orderDetailsRepo;
