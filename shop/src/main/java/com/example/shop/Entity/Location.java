@@ -12,14 +12,16 @@ import javax.persistence.*;
 @Entity
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@Builder
 public class Location extends EntittyId {
-    private String name;
+    private String Namee;
 
     @Embedded
     @AttributeOverrides({
             @AttributeOverride( name = "country", column = @Column(name = "Country")),
             @AttributeOverride( name = "city", column = @Column(name = "City")),
             @AttributeOverride( name = "county", column = @Column(name = "County")),
+            @AttributeOverride( name = "streetAddress", column = @Column(name = "StreetAddress"))
     })
     private Address address;
 

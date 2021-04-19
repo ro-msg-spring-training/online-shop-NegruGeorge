@@ -1,6 +1,7 @@
 package com.example.shop.Entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 
 @Entity
+@Builder
 public class OrderDetail  {
 
     @EmbeddedId

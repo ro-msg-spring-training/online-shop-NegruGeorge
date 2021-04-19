@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Table(name="customer")
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@Builder
 public class Customer extends EntittyId{
 
     private String FirstName;

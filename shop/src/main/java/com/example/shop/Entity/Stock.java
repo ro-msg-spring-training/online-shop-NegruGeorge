@@ -2,6 +2,7 @@ package com.example.shop.Entity;
 
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,18 +12,18 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class Stock{
 
     @EmbeddedId
-    private StockId id;
+    private StockId stockId;
 
-
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("idProduct")
     @JoinColumn(name="IdProduct")
     private Product product;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("idLocation")
     @JoinColumn(name="IdLocation")
     private Location location;

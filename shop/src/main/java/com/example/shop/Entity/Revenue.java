@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Entity
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-
+@Builder
 public class Revenue extends EntittyId {
     @ManyToOne
     @JoinColumn(name="IdLocation")
