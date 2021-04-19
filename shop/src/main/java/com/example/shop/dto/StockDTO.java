@@ -1,22 +1,18 @@
-package com.example.shop.Entity;
+package com.example.shop.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import java.io.Serializable;
 
-
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Embeddable
+@NoArgsConstructor
 @Builder
-public class StockId implements Serializable {
-
+public class StockDTO implements Serializable {
     private Integer idProduct;
     private Integer idLocation;
+    private Integer quantity;
 }

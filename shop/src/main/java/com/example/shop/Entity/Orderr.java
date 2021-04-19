@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @Entity
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@Builder
 public class Orderr extends EntittyId {
 
     @ManyToOne
@@ -21,7 +22,7 @@ public class Orderr extends EntittyId {
     @ManyToOne
     @JoinColumn(name="IdCustomer")
     private Customer customer;
-    private LocalDate CratedAt;
+    private LocalDate CreatedAt;
 
     @Embedded
     @AttributeOverrides({
@@ -31,13 +32,13 @@ public class Orderr extends EntittyId {
     })
     private Address address;
 
-    public Orderr(Location l, Customer c , Address a)
-    {
-        this.ShippedFrom =l;
-        this.customer = c;
-
-        this.address = a;
-    }
+//    public Orderr(Location l, Customer c , Address a)
+//    {
+//        this.ShippedFrom =l;
+//        this.customer = c;
+//
+//        this.address = a;
+//    }
 
 
 

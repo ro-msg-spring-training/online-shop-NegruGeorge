@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name="supplier")
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-
+@Builder
 public class Supplier extends EntittyId {
     private String Namee;
 
